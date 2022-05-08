@@ -8,7 +8,7 @@ while True:
         password = input("введи пароль")
 
         if login in users.keys():
-            if users['admin'] == password:
+            if users[login] == password:
                 print("успешно")
                 print(secret)
                 break
