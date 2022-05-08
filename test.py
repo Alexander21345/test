@@ -1,4 +1,24 @@
-number = [1,1,2,3,5,8,13,21]
-for a in number:
-    if a > 5 and a < 18 and a % 2 != 0:
-      print(a)
+users = {"admin" : "1234"}
+secret = "42"
+
+while True:
+    q1 = input("вход или регистрация ?")
+    if q1 == "вход":
+        login = input ("введи логин")
+        password = input("введи пароль")
+
+        if login in users.keys():
+            if users['admin'] == password:
+                print("успешно")
+                print(secret)
+                break
+    elif q1 == "регистрация":
+        login = input("введи логин")
+        password = input("введи пароль")
+        if login in users.keys():
+            print("логин занят")
+        else:
+            users[login] = password
+            print("регистрация норм")
+    else:
+        print("данные гавно")
